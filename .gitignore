@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+*.egg-info/
+src/agd_request_guard/guard.c
+src/agd_request_guard/*.so
+.DS_Store

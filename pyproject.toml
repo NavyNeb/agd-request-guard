@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "cython>=3.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agd-request-guard"
+version = "0.1.1"
+description = "Shared request authorization helper for internal AGD services."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+]
+
+[project.optional-dependencies]
+demo = ["uvicorn>=0.27.1"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.cibuildwheel]
+build-frontend = "build"
+skip = ["*-win32", "*-manylinux_i686", "pp*"]

@@ -1,0 +1,2 @@
+include setup.py
+recursive-include src/agd_request_guard *.pyx *.pxd
